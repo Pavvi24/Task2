@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 app.use("/api/tasks", taskRoutes);
 
 // ✅ IMPORTANT: Use Render port
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT;
 
 console.log("Step 3: Connecting to MongoDB...");
 
