@@ -14,9 +14,16 @@ app.use(express.json());
 
 console.log("Step 2: Express setup done");
 
+// ✅ Root route (for browser test)
+app.get("/", (req, res) => {
+    res.send("Task Manager API is running 🚀");
+});
+
+// ✅ Main API route
 app.use("/api/tasks", taskRoutes);
 
-const PORT = 5001;
+// ✅ IMPORTANT: Use Render port
+const PORT = process.env.PORT || 5001;
 
 console.log("Step 3: Connecting to MongoDB...");
 
