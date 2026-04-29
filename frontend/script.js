@@ -1,4 +1,4 @@
-const API = "http://localhost:5001/api/tasks";
+const API = "https://task2-1-ibkb.onrender.com/api/tasks";
 
 let allTasks = [];
 let currentFilter = 'all';
